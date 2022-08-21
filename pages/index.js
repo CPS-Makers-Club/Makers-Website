@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useRef } from "react";
-import { Navbar } from '../components/navbar'
+import { Navbar } from '../components/Navbar'
+import { About } from '../components/About';
+import { Resources } from '../components/Resources';
 
 export default function Home() {
   const el = useRef(null)
@@ -22,7 +24,7 @@ export default function Home() {
         <Navbar />
         <div className='bg-white text-black overflow-hidden items-center flex flex-grow'>
 
-          <div className='flex flex-auto items-center justify-center'>
+          <div className='flex flex-auto items-center justify-center flex-col'>
 
             <Image
               src='/rocket.svg'
@@ -34,16 +36,20 @@ export default function Home() {
             >
             </Image>
 
+
+            <div className='text-center font-sans'>
+              <h2 className='text-7xl animate-fade pt-4'>CPS Makers</h2>
+              {/* <span ref={el} className='text-4xl animate-fade'></span> */}
+            </div>
+
           </div>
-
         </div>
-
-        <div className='text-center space-y-4 font-sans'>
-          <h2 className='text-7xl animate-fade'>CPS Makers</h2>
-          {/* <span ref={el} className='text-4xl animate-fade'></span> */}
-        </div>
-
       </div>
+      <div className="flex items-center justify-center flex-col">
+        <About />
+        <Resources />
+      </div>
+
     </div>
 
   )
