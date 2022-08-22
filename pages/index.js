@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { Navbar } from '../components/Navbar'
 import { About } from '../components/About';
 import { Resources } from '../components/Resources';
+import { Info } from '../components/Info';
 
 export default function Home() {
   const el = useRef(null)
@@ -32,7 +33,7 @@ export default function Home() {
               width={255}
               height={256}
               // todo: add animations
-              className='animate-fade'
+              className='animate-fade z-0'
             >
             </Image>
 
@@ -48,6 +49,7 @@ export default function Home() {
       <div className="flex items-center justify-center flex-col">
         <About />
         <Resources />
+        <Info />
       </div>
 
     </div>

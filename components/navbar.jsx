@@ -10,7 +10,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className='flex items-center flex-wrap bg-white p-3 sticky top-0'>
+            <nav className='flex items-center flex-wrap bg-white p-3 sticky top-0 z-10'>
                 {/* Left hand :rocket: + logo text */}
                 {/* Notes: remove prior to prod: https://dev.to/andrewespejo/how-to-design-a-simple-and-beautiful-navbar-using-nextjs-and-tailwindcss-26p1 */}
                 {/* TODO: 
