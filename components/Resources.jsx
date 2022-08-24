@@ -31,15 +31,24 @@ export const Resources = () => {
 
 
     const isMobile = windowSize.width <= 907;
+    // https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles
     return (
         <div className="flex items-center justify-center flex-col mt-[5.5rem]">
             <h1 className="text-5xl rounded text-black font-bold uppercase mb-2">resources</h1>
             <div className="flex flex-row justify-center mb-3 flex-wrap">
-                <div className={"border-slate-400 border-2 bg-slate-200  w-[320px] h-[300px] rounded p-3 " + (!isMobile ? "mr-10" : "mb-3")}>
-                    <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Events</h1>
-                    <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Mailing List</h1>
+                <div className={"border-slate-400 border-2 bg-slate-200  w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "mr-10" : "mb-3")}>
+                    <div className="mb-3">
+                        <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Events & Prints</h1>
+                        <p className="mb-4">See our past & upcoming meetings and print jobs.</p>
+                        <a href="https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles" className="py-1.5 px-3 border-2 bg-btnRed rounded-lg text-white">GCal</a>
+                    </div>
+                    <div>
+                        <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Mailing List</h1>
+                        <p className='mb-4'>Subscribe for announcements and upcoming events.</p>
+                        <a href="" className="py-1.5 px-3 border-2 bg-btnRed rounded-lg text-white">Subscribe</a>
+                    </div>
                 </div>
-                <div className={"border-slate-400 border-2 bg-slate-200  w-[320px] h-[300px] rounded p-3 " + (!isMobile ? "ml-10" : "")}>
+                <div className={"border-slate-400 border-2 bg-slate-200  w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "ml-10" : "")}>
                     <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Guides</h1>
                 </div>
             </div>
