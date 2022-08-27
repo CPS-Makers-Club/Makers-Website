@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'btnRed': '#ba2e5a'
+        'btnRed': '#ba2e5a',
+        'abtBg': '#f8f9fa',
+        'resourceBoxBorder': '#00000020'
       },
       animation: {
         'fade': 'fade ease 3s'
