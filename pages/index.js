@@ -5,6 +5,8 @@ import { Navbar } from '../components/Navbar'
 import { About } from '../components/About';
 import { Resources } from '../components/Resources';
 import { Info } from '../components/Info';
+import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { SiReact, SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si'
 
 export default function Home() {
   const el = useRef(null)
@@ -27,9 +29,9 @@ export default function Home() {
           <div className='flex flex-auto items-center justify-center flex-col'>
 
             <Image
-              src='/rocket.svg'
+              src='/rocket_twitter.svg'
               alt='logo'
-              width={255}
+              width={256}
               height={256}
               // todo: add animations
               className='animate-fade z-0'
@@ -56,11 +58,19 @@ export default function Home() {
           <p>
             © 2022 Julian Vuong, Jim Fang, CPS Makers' Club
           </p>
+          <div className='flex justify-center'>
+            <FaGithub className="text-2xl mr-2" />
+            <FaInstagram className="text-2xl" />
+          </div>
+          <div className='flex justify-center'>
+            <p className='mr-1'>Site Powered By</p>
+            <SiReact className="text-2xl mr-2" title='React' />
+            <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
+            <SiTailwindcss className="text-2xl mr-2" title='Tailwind CSS' />
+            <SiVercel className="text-2xl" title='Vercel' />
+          </div>
           <p>
-            Code open-sourced under the MIT license: <a href="https://github.com/AirFusion45/website" target='_blank' rel='noreferrer' className="flex inline-flex flex-wrap underline decoration-dotted">GitHub/AirFusion45/website<FaExternalLinkAlt className="ml-2 mt-1 text-lg" /></a>
-          </p>
-          <p>
-            Emergency Webmaster Contact: <a href="mailto:jfang.cv.ca.us@gmail.com" className="underline decoration-dotted">jfang.cv.ca.us@gmail.com</a>
+            Emergency Webmaster Contact: <a href="mailto:yfang@college-prep.org" className="underline decoration-dotted">yfang@college-prep.org</a>
           </p>
         </div>
 
