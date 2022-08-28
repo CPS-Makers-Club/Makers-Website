@@ -5,10 +5,10 @@ export const Info = () => {
             <p className='text-center'>Get in touch!</p>
             <div className="py-[100px] text-xl text-center">
                 <p className='pb-4'>
-                    Jim Fang<br />yfang@college-prep.org
+                    Jim Fang, Co-leader<br />yfang@college-prep.org
                 </p>
                 <p>
-                    Julian Vuong<br />jvuong@college-prep.org
+                    Julian Vuong, Co-leader<br />jvuong@college-prep.org
                 </p>
             </div>
         </div>

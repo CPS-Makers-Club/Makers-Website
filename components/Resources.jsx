@@ -36,11 +36,11 @@ export const Resources = () => {
         <div className="flex items-center justify-center flex-col py-[5.5rem] bg-abtBg w-screen">
             <h1 className="text-5xl rounded text-black font-bold uppercase mb-6">resources</h1>
             <div className="flex flex-row justify-center mb-3 flex-wrap">
-                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[400px] rounded p-3 " + (!isMobile ? "mr-10" : "mb-3")}>
+                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[412px] rounded p-3 " + (!isMobile ? "mr-10" : "mb-3")}>
                     <div className="mb-3">
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Events & Prints</h1>
                         <p className="mb-4">See our past & upcoming meetings and print jobs.</p>
-                        <a href="https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles" className="py-1.5 px-3 bg-btnRed rounded-lg text-white">GCal</a>
+                        <a href="https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">GCal</a>
                     </div>
                     <div className = 'mb-3'>
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Common Classroom</h1>

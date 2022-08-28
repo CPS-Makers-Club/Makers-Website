@@ -20,9 +20,8 @@ export default function Home() {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-
+      <Navbar />
       <div className='flex flex-col h-screen'>
-        <Navbar />
         <div className='bg-white text-black overflow-hidden items-center flex flex-grow'>
 
           <div className='flex flex-auto items-center justify-center flex-col'>
@@ -46,11 +45,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-col">
+      <div className="flex items-center justify-center flex-col overflow-hidden">
         <About />
         <Resources />
         <Info />
       </div>
+
+      <footer className='pt-[7rem] text-lg'>
+        <div className='text-center'>
+          <p>
+            © 2022 Julian Vuong, Jim Fang, CPS Makers' Club
+          </p>
+          <p>
+            Code open-sourced under the MIT license: <a href="https://github.com/AirFusion45/website" target='_blank' rel='noreferrer' className="flex inline-flex flex-wrap underline decoration-dotted">GitHub/AirFusion45/website<FaExternalLinkAlt className="ml-2 mt-1 text-lg" /></a>
+          </p>
+          <p>
+            Emergency Webmaster Contact: <a href="mailto:jfang.cv.ca.us@gmail.com" className="underline decoration-dotted">jfang.cv.ca.us@gmail.com</a>
+          </p>
+        </div>
+
+      </footer>
 
     </div>
 
