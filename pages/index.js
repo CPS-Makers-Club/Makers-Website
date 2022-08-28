@@ -29,7 +29,7 @@ export default function Home() {
           <div className='flex flex-auto items-center justify-center flex-col'>
 
             <Image
-              src='/rocket_twitter.svg'
+              src='/rocket.svg'
               alt='logo'
               width={256}
               height={256}
