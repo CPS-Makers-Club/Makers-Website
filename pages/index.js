@@ -53,14 +53,14 @@ export default function Home() {
         <Info />
       </div>
 
-      <footer className='pt-[7rem] text-lg'>
+      <footer className='pt-[7rem] text-lg bg-footerBg'>
         <div className='text-center'>
           <p>
             © 2022 Julian Vuong, Jim Fang, CPS Makers' Club
           </p>
           <div className='flex justify-center'>
-            <FaGithub className="text-2xl mr-2" />
-            <FaInstagram className="text-2xl" />
+            <a href='https://github.com/CPS-Makers-Club/Website' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
+            <a href='https://www.instagram.com/xlabcreations/' target='_blank'><FaInstagram className="text-2xl" /></a>
           </div>
           <div className='flex justify-center'>
             <p className='mr-1'>Site Powered By</p>
