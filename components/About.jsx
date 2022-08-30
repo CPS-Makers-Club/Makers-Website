@@ -50,7 +50,7 @@ export const About = () => {
                             >
                             </Image>
                         </div>
-                        <h4 className='my-[15px] flex justify-center font-bold text-2xl'>
+                        <h4 className="my-[15px] flex justify-center font-bold text-2xl">
                             Education
                         </h4>
                         <p className='text-center mx-10'>

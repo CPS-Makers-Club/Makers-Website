@@ -5,8 +5,9 @@ import { Navbar } from '../components/Navbar'
 import { About } from '../components/About';
 import { Resources } from '../components/Resources';
 import { Info } from '../components/Info';
-import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaArrowDown } from 'react-icons/fa'
 import { SiReact, SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si'
+import Link from 'next/link'
 
 export default function Home() {
   const el = useRef(null)
@@ -40,17 +41,34 @@ export default function Home() {
 
 
             <div className='text-center font-sans'>
-              <h2 className='text-7xl animate-fade pt-4'>CPS Makers</h2>
+              <h2 className="text-7xl animate-fade pt-4">CPS Makers</h2>
               {/* <span ref={el} className='text-4xl animate-fade'></span> */}
             </div>
-
+            <a href='#about' className='pt-4 text-5xl animate-fade'>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                className='pt-4 text-5xl animate-fade'
+                href="#about"
+              ><FaArrowDown /></Link>
+            </a>
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center flex-col overflow-hidden">
-        <About />
-        <Resources />
-        <Info />
+        <div id='about'>
+          <About />
+        </div>
+        <div id='resources'>
+          <Resources />
+        </div>
+        <div id='info'>
+          <Info />
+        </div>
       </div>
 
       <footer className='pt-[7rem] text-lg bg-footerBg'>
