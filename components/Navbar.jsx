@@ -1,4 +1,5 @@
-import { useState } from "react";
+import NextLink from 'next/link'
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 
@@ -9,10 +10,41 @@ export const Navbar = () => {
         setActive(!active);
     };
 
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
+
+    useEffect(() => {
+        // only execute all the code below in client side
+        if (typeof window !== 'undefined') {
+            // Handler to call on window resize
+            function handleResize() {
+                // Set window width/height to state
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            }
+
+            // Add event listener
+            window.addEventListener("resize", handleResize);
+
+            // Call handler right away so state gets updated with initial window size
+            handleResize();
+
+            // Remove event listener on cleanup
+            return () => window.removeEventListener("resize", handleResize);
+        }
+    }, []); // Empty array ensures that effect is only run on mount
+
+
+    const isMobile = windowSize.width <= 907;
+
     return (
         <>
             <nav className='flex items-center flex-wrap bg-white p-3 sticky top-0 z-10'>
-                <Link href='/'>
+                <NextLink href='/'>
                     <a className='inline-flex items-center p-2 mr-4 '>
 
                         <Image
@@ -26,7 +58,7 @@ export const Navbar = () => {
                             CPS Makers
                         </span>
                     </a>
-                </Link>
+                </NextLink>
 
                 {/* Mobile hamburger - hidden if width > 1024px */}
                 <button className=' inline-flex p-3 hover:bg-red-500 rounded lg:hidden text-black ml-auto hover:text-white outline-none'
@@ -62,7 +94,7 @@ export const Navbar = () => {
                             offset={-70}
                             duration={1000}>
 
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#about">
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#about" onClick={(isMobile) ? handleClick : undefined}>
                                 ABOUT
                             </a>
                         </Link>
@@ -74,7 +106,7 @@ export const Navbar = () => {
                             offset={-70}
                             duration={1000}>
 
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#resources">
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#resources" onClick={(isMobile) ? handleClick : undefined}>
                                 RESOURCES
                             </a>
                         </Link>
@@ -92,7 +124,7 @@ export const Navbar = () => {
                             offset={-70}
                             duration={1000}>
 
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href='#info'>ADDITIONAL INFO & CONTACT</a>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href='#info' onClick={(isMobile) ? handleClick : undefined}>ADDITIONAL INFO & CONTACT</a>
                         </Link>
                     </div>
                 </div>

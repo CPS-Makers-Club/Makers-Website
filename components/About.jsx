@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react"
+import { Link } from "react-scroll";
+import { FaArrowDown } from 'react-icons/fa'
 
 export const About = () => {
     const [windowSize, setWindowSize] = useState({
@@ -76,6 +78,17 @@ export const About = () => {
                         </p>
                     </div>
                 </div>
+                <a href='#resources' className='pt-10 text-5xl animate-fade'>
+                    <Link
+                        activeClass="active"
+                        to="resources"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={1000}
+                        className='text-5xl'
+                    ><FaArrowDown /></Link>
+                </a>
             </div>
         </div >
     )

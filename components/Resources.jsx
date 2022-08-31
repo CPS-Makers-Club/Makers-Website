@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-scroll"
+import { FaArrowDown } from 'react-icons/fa'
 
 export const Resources = () => {
     const [windowSize, setWindowSize] = useState({
@@ -36,7 +38,7 @@ export const Resources = () => {
         <div className="flex items-center justify-center flex-col py-[5.5rem] bg-abtBg w-screen">
             <h1 className="text-5xl rounded text-black font-bold uppercase mb-6">resources</h1>
             <div className="flex flex-row justify-center mb-3 flex-wrap">
-                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[412px] rounded p-3 " + (!isMobile ? "mr-10" : "mb-3")}>
+                <div className={"border-slate-400 border border-[.125] bg-white rounded p-3 " + (!isMobile ? "w-[500px] h-[412px] mr-10" : "w-[300px] mb-3")}>
                     <div className="mb-3">
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Events & Prints</h1>
                         <p className="mb-4">See our past & upcoming meetings and print jobs.</p>
@@ -54,7 +56,7 @@ export const Resources = () => {
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSedUKdfh9EZoxOIucM7oaQbJ0Rt-qcboXqBp82FX9AFLEQcew/viewform" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">Subscribe</a>
                     </div>
                 </div>
-                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "ml-10" : "")}>
+                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "w-[500px] h-[412px] ml-10" : "w-[300px]")}>
                     <div>
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Guides & Forms</h1>
                         <p className='mb-4'>Check our Notion page for 3D printing guides & print scheduling</p>
@@ -66,6 +68,17 @@ export const Resources = () => {
                     </div>
                 </div>
             </div>
+            <a href='#info' className='pt-10 text-5xl animate-fade'>
+                    <Link
+                        activeClass="active"
+                        to="info"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={1000}
+                        className='text-5xl'
+                    ><FaArrowDown /></Link>
+                </a>
         </div>
     )
 };

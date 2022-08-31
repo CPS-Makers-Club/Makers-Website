@@ -1,16 +1,47 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navbar } from '../components/Navbar'
 import { About } from '../components/About';
 import { Resources } from '../components/Resources';
 import { Info } from '../components/Info';
 import { FaGithub, FaInstagram, FaArrowDown } from 'react-icons/fa'
-import { SiReact, SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si'
+import { SiReact, SiNextdotjs, SiTailwindcss, SiVercel, SiCloudflare } from 'react-icons/si'
 import { Link } from "react-scroll";
 
 export default function Home() {
   const el = useRef(null)
+
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); // Empty array ensures that effect is only run on mount
+
+
+  const isMobile = windowSize.width <= 907;
 
   return (
     <div>
@@ -41,7 +72,7 @@ export default function Home() {
 
 
             <div className='text-center font-sans'>
-              <h2 className="text-7xl animate-fade pt-4">CPS Makers</h2>
+              <h2 className={"animate-fade pt-4 " + (isMobile ? "text-6xl" : "text-7xl")}>CPS Makers</h2>
               {/* <span ref={el} className='text-4xl animate-fade'></span> */}
             </div>
             <a href='#about' className='pt-24 text-5xl animate-fade'>
@@ -77,17 +108,18 @@ export default function Home() {
           </p>
           {/* 🎯 https://www.athenian-robotics.org/ react x next >>> MkDocs */}
           <div className='flex justify-center'>
-            <a href='https://github.com/CPS-Makers-Club' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
+            <a href='https://github.com/CPSMakers/Makers-Website' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
             <a href='https://www.instagram.com/xlabcreations/' target='_blank'><FaInstagram className="text-2xl" /></a>
           </div>
           <div className='flex justify-center'>
             <p className='mr-1'>Site Powered By</p>
             <SiReact className="text-2xl mr-2" title='React' />
-            <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
             <SiTailwindcss className="text-2xl mr-2" title='Tailwind CSS' />
-            <SiVercel className="text-2xl" title='Vercel' />
+            <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
+            <SiVercel className="text-2xl mr-2" title='Vercel' />
+            <SiCloudflare className="text-2xl" title='Cloudflare' />
           </div>
-          <p>
+          <p className='pb-2'>
             Emergency Webmaster Contact: <a href="mailto:yfang@college-prep.org" className="underline decoration-dotted">yfang@college-prep.org</a>
           </p>
         </div>

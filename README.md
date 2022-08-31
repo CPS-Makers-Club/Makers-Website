@@ -1,36 +1,44 @@
-** Testing Git after transfer **
+# College Prep Makers' Club Website
+Repository for website of College Prep's Makers' Club built with [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/) on [Next.js](https://nextjs.org/). Hosted on [Vercel](https://vercel.com/) & managed using [Cloudflare](https://cloudflare.com). Repo bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Find the site at [cpsmakers.club](https://cpsmakers.club).
 
-## Getting Started
+## Build a copy on Vercel
 
-First, run the development server:
+ ​If you would like to build a copy of the website, fork this repo and deploy it on [Vercel](https://vercel.com). Vercel should automatically detect it as a Next.js project and deploy it.
+  
+## Build a copy on Local Machine
 
+Clone the repo, then:
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+* *[AirFusion45 / Jim F.](https://github.com/AirFusion45)* - Original Author
+* *[Bagel12356 / Julian V.](https://github.com/Bagel12356)* - Original Author
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License 
+This Project is licensed under MIT License - see the LICENSE.md file for more details. The main points of the MIT License are:
+  
+  * This code can be used commercially
+  * This code can be modified
+  * This code can be distributed
+  * This code can be used for private use
+  * This code has no Liability
+  * This code has no Warranty
+  * When using this code, credit must be given to the author
 
-## Learn More
+## Privacy
 
-To learn more about Next.js, take a look at the following resources:
+The hosted website uses Vercel Analytics. The code in the repo contains no telemetry or tracking.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact Me
+Feel free to contact me if you find bugs, license issues, missing credits, etc.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  * Please contact us here:
+    * Email: makers@college-prep.org
