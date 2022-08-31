@@ -124,7 +124,9 @@ export const Navbar = () => {
                             offset={-70}
                             duration={1000}>
 
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href='#info' onClick={(isMobile) ? handleClick : undefined}>ADDITIONAL INFO & CONTACT</a>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href='#info' onClick={(isMobile) ? handleClick : undefined}>
+                                ADDITIONAL INFO & CONTACT
+                            </a>
                         </Link>
                     </div>
                 </div>

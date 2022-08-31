@@ -35,7 +35,7 @@ This Project is licensed under MIT License - see the LICENSE.md file for more de
 
 ## Privacy
 
-The hosted website uses Vercel Analytics. The code in the repo contains no telemetry or tracking.
+The hosted website uses Google Analytics to track non personally identifiable information of visitors.  
 
 ## Contact Me
 Feel free to contact me if you find bugs, license issues, missing credits, etc.
