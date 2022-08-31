@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
     const [active, setActive] = useState(false);
@@ -54,13 +54,27 @@ export const Navbar = () => {
                         }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-                        <Link href='/#about'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600'>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}>
+
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#about">
                                 ABOUT
                             </a>
                         </Link>
-                        <Link href='/#resources'>
-                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600'>
+                        <Link
+                            activeClass="active"
+                            to="resources"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}>
+
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href="#resources">
                                 RESOURCES
                             </a>
                         </Link>
@@ -76,9 +90,8 @@ export const Navbar = () => {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={1000}
-                            href="#info"
-                        >
+                            duration={1000}>
+
                             <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:text-red-600' href='#info'>ADDITIONAL INFO & CONTACT</a>
                         </Link>
                     </div>

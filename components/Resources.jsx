@@ -42,7 +42,7 @@ export const Resources = () => {
                         <p className="mb-4">See our past & upcoming meetings and print jobs.</p>
                         <a href="https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">GCal</a>
                     </div>
-                    <div className = 'mb-3'>
+                    <div className='mb-3'>
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Common Classroom</h1>
                         <p className='mb-4'>Signup for Makers' Common Classroom Events!</p>
                         <a href="https://www.cc-collegeprep.school/" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">Signup</a>
@@ -51,7 +51,7 @@ export const Resources = () => {
                     <div className='mb-3'>
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Mailing List</h1>
                         <p className='mb-4'>Subscribe for announcements and upcoming events.</p>
-                        <a href="https://forms.gle/DwcAbGp1cJfv2431A" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">Subscribe</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSedUKdfh9EZoxOIucM7oaQbJ0Rt-qcboXqBp82FX9AFLEQcew/viewform" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">Subscribe</a>
                     </div>
                 </div>
                 <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "ml-10" : "")}>

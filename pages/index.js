@@ -7,7 +7,7 @@ import { Resources } from '../components/Resources';
 import { Info } from '../components/Info';
 import { FaGithub, FaInstagram, FaArrowDown } from 'react-icons/fa'
 import { SiReact, SiNextdotjs, SiTailwindcss, SiVercel } from 'react-icons/si'
-import Link from 'next/link'
+import { Link } from "react-scroll";
 
 export default function Home() {
   const el = useRef(null)
@@ -44,7 +44,7 @@ export default function Home() {
               <h2 className="text-7xl animate-fade pt-4">CPS Makers</h2>
               {/* <span ref={el} className='text-4xl animate-fade'></span> */}
             </div>
-            <a href='#about' className='pt-4 text-5xl animate-fade'>
+            <a href='#about' className='pt-24 text-5xl animate-fade'>
               <Link
                 activeClass="active"
                 to="about"
@@ -53,7 +53,6 @@ export default function Home() {
                 offset={-70}
                 duration={1000}
                 className='pt-4 text-5xl animate-fade'
-                href="#about"
               ><FaArrowDown /></Link>
             </a>
           </div>
@@ -76,8 +75,9 @@ export default function Home() {
           <p>
             © 2022 Julian Vuong, Jim Fang, CPS Makers' Club
           </p>
+          {/* 🎯 https://www.athenian-robotics.org/ react x next >>> MkDocs */}
           <div className='flex justify-center'>
-            <a href='https://github.com/CPS-Makers-Club/Website' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
+            <a href='https://github.com/CPS-Makers-Club' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
             <a href='https://www.instagram.com/xlabcreations/' target='_blank'><FaInstagram className="text-2xl" /></a>
           </div>
           <div className='flex justify-center'>
