@@ -116,8 +116,18 @@ export default function Home() {
             <SiReact className="text-2xl mr-2" title='React' />
             <SiTailwindcss className="text-2xl mr-2" title='Tailwind CSS' />
             <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
-            <SiVercel className="text-2xl mr-2" title='Vercel' />
+            <a href="https://vercel.com/?utm_source=college-prep-makers&utm_campaign=oss" target="_blank"><SiVercel className="text-2xl mr-2" title='Vercel' /></a>
             <SiCloudflare className="text-2xl" title='Cloudflare' />
+          </div>
+          <div className='flex justify-center'>
+            <a href='https://vercel.com/?utm_source=college-prep-makers&utm_campaign=oss' target='_blank'>
+              <Image
+                src='/powered_by_vercel.svg'
+                alt='powered by Vercel'
+                height={44}
+                width={212}
+              />
+            </a>
           </div>
           <p className='pb-2'>
             Emergency Webmaster Contact: <a href="mailto:yfang@college-prep.org" className="underline decoration-dotted">yfang@college-prep.org</a>

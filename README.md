@@ -1,4 +1,6 @@
 # College Prep Makers' Club Website
+[![Powered by Vercel](./public/powered_by_vercel.svg)](https://vercel.com/?utm_source=college-prep-makers&utm_campaign=oss)
+
 Repository for website of College Prep's Makers' Club built with [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/) on [Next.js](https://nextjs.org/). Hosted on [Vercel](https://vercel.com/) & managed using [Cloudflare](https://cloudflare.com). Repo bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Find the site at [cpsmakers.club](https://cpsmakers.club).

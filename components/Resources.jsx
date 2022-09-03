@@ -32,13 +32,16 @@ export const Resources = () => {
     }, []); // Empty array ensures that effect is only run on mount
 
 
-    const isMobile = windowSize.width <= 907;
+    const isMobile = {
+        small: windowSize.width <= 1080,
+        trueMobile: windowSize.width <= 612
+    }
     // https://calendar.google.com/calendar/u/0/embed?src=c_osk658485b1icalcjkq1c6tar0@group.calendar.google.com&ctz=America/Los_Angeles
     return (
         <div className="flex items-center justify-center flex-col py-[5.5rem] bg-abtBg w-screen">
             <h1 className="text-5xl rounded text-black font-bold uppercase mb-6">resources</h1>
             <div className="flex flex-row justify-center mb-3 flex-wrap">
-                <div className={"border-slate-400 border border-[.125] bg-white rounded p-3 " + (!isMobile ? "w-[500px] h-[412px] mr-10" : "w-[300px] mb-3")}>
+                <div className={"border-slate-400 border border-[.125] bg-white rounded p-3 " + ((isMobile.small && !isMobile.trueMobile) ? "w-[300px] mr-3" : (isMobile.trueMobile ? "w-[300px] mb-3" : "w-[500px] h-[412px] mr-10"))}>
                     <div className="mb-3">
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Events & Prints</h1>
                         <p className="mb-4">See our past & upcoming meetings and print jobs.</p>
@@ -56,7 +59,7 @@ export const Resources = () => {
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSedUKdfh9EZoxOIucM7oaQbJ0Rt-qcboXqBp82FX9AFLEQcew/viewform" className="py-1.5 px-3 bg-btnRed rounded-lg text-white" target="_blank">Subscribe</a>
                     </div>
                 </div>
-                <div className={"border-slate-400 border border-[.125] bg-white w-[500px] h-[300px] rounded p-3 " + (!isMobile ? "w-[500px] h-[412px] ml-10" : "w-[300px]")}>
+                <div className={"border-slate-400 border border-[.125] bg-white rounded p-3 " + ((isMobile.small || isMobile.trueMobile) ? "w-[300px] h-[300px]" : "w-[500px] h-[412px] ml-10")}>
                     <div>
                         <h1 className="text-4xl font-bold flex inline-flex flex-wrap pb-3">Guides & Forms</h1>
                         <p className='mb-4'>Check our Notion page for 3D printing guides & print scheduling</p>
@@ -68,7 +71,8 @@ export const Resources = () => {
                     </div>
                 </div>
             </div>
-            <a href='#info' className='pt-10 text-5xl animate-fade'>
+            <div>
+                <a href='#info' className='pt-10 text-5xl animate-fade flex-col'>
                     <Link
                         activeClass="active"
                         to="info"
@@ -79,6 +83,7 @@ export const Resources = () => {
                         className='text-5xl'
                     ><FaArrowDown /></Link>
                 </a>
+            </div>
         </div>
     )
 };
