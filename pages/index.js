@@ -108,8 +108,8 @@ export default function Home() {
           </p>
           {/* 🎯 https://www.athenian-robotics.org/ react x next >>> MkDocs */}
           <div className='flex justify-center'>
-            <a href='https://github.com/CPSMakers/Makers-Website' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
-            <a href='https://www.instagram.com/xlabcreations/' target='_blank'><FaInstagram className="text-2xl" /></a>
+            <a href='https://github.com/orgs/CPS-Makers-Club' target='_blank'><FaGithub className="text-2xl mr-2" /></a>
+            <a href='https://www.instagram.com/cps_makers/' target='_blank'><FaInstagram className="text-2xl" /></a>
           </div>
           <div className='flex justify-center'>
             <p className='mr-1'>Site Powered By</p>
