@@ -119,7 +119,7 @@ export default function Home() {
             <a href="https://vercel.com/?utm_source=college-prep-makers&utm_campaign=oss" target="_blank"><SiVercel className="text-2xl mr-2" title='Vercel' /></a>
             <SiCloudflare className="text-2xl" title='Cloudflare' />
           </div>
-          <div className='flex justify-center'>
+          {/* <div className='flex justify-center'>
             <a href='https://vercel.com/?utm_source=college-prep-makers&utm_campaign=oss' target='_blank'>
               <Image
                 src='/powered_by_vercel.svg'
@@ -128,7 +128,7 @@ export default function Home() {
                 width={212}
               />
             </a>
-          </div>
+          </div> */}
           <p className='pb-2'>
             Emergency Webmaster Contact: <a href="mailto:yfang@college-prep.org" className="underline decoration-dotted">yfang@college-prep.org</a>
           </p>
