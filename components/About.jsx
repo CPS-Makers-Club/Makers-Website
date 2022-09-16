@@ -37,7 +37,8 @@ export const About = () => {
     return (
         <div className="flex items-center justify-center flex-col my-[5.5rem]">
             <h1 className="text-5xl rounded text-black font-bold uppercase mb-6">about us</h1>
-            <p className="text-xl pb-5 text-center px-20">Makers' Club is a gathering of people who like to build! No experience is necessary—we hope to create a space where everyone can use the xLab for both individual projects and a large club project. We are currently building <a href="https://en.wikipedia.org/wiki/RepRap_project" target="_blank" className='underline decoration-dotted'>RepRap (<b>Rep</b>licating <b>Rap</b>id Protoyper)</a> 3D printer out of 3D printed parts.</p>
+            <p className="text-xl pb-5 text-center px-20">Makers' Club is a gathering of people who like to build! No experience is necessary—we hope to create a space where everyone can use the xLab for both individual projects and a large club project.</p>
+            {/* We are currently building <a href="https://en.wikipedia.org/wiki/RepRap_project" target="_blank" className='underline decoration-dotted'>RepRap (<b>Rep</b>licating <b>Rap</b>id Protoyper)</a> 3D printer out of 3D printed parts. */}
             <div className="flex justify-center mb-3 flex-wrap">
                 <div className={"flex grid-col-2 gap-2"}>
                     {/* + (!isMobile ? "mr-10" : "mb-3") */}
@@ -56,7 +57,7 @@ export const About = () => {
                             Education
                         </h4>
                         <p className='text-center mx-10'>
-                            We host 3D printer, laser cutting certifications (coming soon) and Ultimaker Cura information sessions.
+                            We host 3D printer, laser cutting certifications (coming soon) and Ultimaker Cura Software information sessions.
                         </p>
                     </div>
                     <div className='w-1/2'>
