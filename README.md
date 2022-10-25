@@ -40,7 +40,7 @@ This Project is licensed under MIT License - see the LICENSE.md file for more de
 The hosted website uses Google Analytics to track non personally identifiable information of visitors.  
 
 ## Contact Me
-Feel free to contact me if you find bugs, license issues, missing credits, etc.
+Feel free to contact us if you find bugs, license issues, missing credits, etc.
 
   * Please contact us here:
     * Email: makers@college-prep.org
