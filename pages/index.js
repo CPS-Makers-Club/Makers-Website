@@ -104,7 +104,7 @@ export default function Home() {
       <footer className='pt-[7rem] text-lg bg-footerBg'>
         <div className='text-center'>
           <p>
-            © 2022 Julian Vuong, Jim Fang, CPS Makers' Club
+            © 2022 Jim Fang, Julian Vuong, CPS Makers' Club
           </p>
           {/* 🎯 https://www.athenian-robotics.org/ react x next >>> MkDocs */}
           <div className='flex justify-center'>
